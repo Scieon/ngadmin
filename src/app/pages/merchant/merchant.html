@@ -1,0 +1,16 @@
+<form class="col-md-4 offset-md-4 input-group" (ngSubmit)="showMerchant(input.value)" style="text-align: right">
+  <input class="form-control" #input placeholder="Merchant id" type="email">
+  <span class="input-group-btn">
+        <button class="btn btn-default" type="submit">Search</button>
+  </span>
+</form>
+
+<div *ngIf="this.merchantId==103">
+  <nga-merchant-property></nga-merchant-property>
+<button class="btn btn-default" type="button" (click)="collapse = !collapse"> Expand/Collapse</button>
+<div *ngIf="!collapse" style="padding-top: 20px">
+  <nga-merchant-content></nga-merchant-content>
+  <nga-merchant-content></nga-merchant-content>
+</div>
+  <nga-merchant-history style="padding-top: 200px"></nga-merchant-history>
+</div>
